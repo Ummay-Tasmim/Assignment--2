@@ -210,6 +210,11 @@ body {
 /* hero section end */
 
 
+
+
+/* about start */
+
+
 .container{
   max-width:1200px;
   margin:auto;
@@ -254,25 +259,30 @@ body {
   font-size:14px;
 }
 
-/* Small device (0 - 576px) */
+/* Small device*/
+
 @media(max-width:576px){
   .about h2{font-size:30px;}
   .stats{grid-template-columns:repeat(2,1fr); gap:15px;}
   .container{padding:50px 15px;}
 }
 
-/* Medium device (576px - 992px) */
+/* Medium device */
+
 @media(min-width:576px) and (max-width:992px){
   .stats{grid-template-columns:repeat(2,1fr);}
 }
 
-/* Large device (above 993px) */
+/* Large device*/
+
 @media(min-width:993px){
   .stats{grid-template-columns:repeat(4,1fr);}
 } 
 
 
 /* about end  */
+
+
 
 
 .why h2{
