@@ -335,10 +335,10 @@ body {
 /* why  choose end */
 
 
+/*Featured */
 
 h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 
-/* ===== Featured Episodes ===== */
 .episode-grid{
   max-width:1200px;
   margin:auto;
@@ -365,6 +365,8 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 .episode-card h3{margin:15px 0 10px;}
 .episode-card p{color:#cfc7ff;}
 .episode-card span{color:#2cffb2; font-weight:bold;}
+
+/* end featured */
 
 /* ===== Host Section ===== */
 .host-box{
