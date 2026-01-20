@@ -34,7 +34,7 @@ body {
   font-weight: 700;
 }
 .logo span {
-  color:linear-gradient(135deg, #ff4fd8, #ffb347); ;
+  color:linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)); 
 }
 
 .nav-menu {
@@ -50,12 +50,40 @@ body {
 }
 
 .btn-gradient {
-  background: linear-gradient(135deg, #ff4fd8, #ffb347);
+  background: linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
   color: #fff;
   padding: 12px 26px;
-  border-radius: 30px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 /* navbar end */
@@ -68,21 +96,28 @@ body {
   position: relative;
   padding: 120px 20px;
   text-align: center;
+  background-image: url(./assets/hero-bg.png);
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
 }
 
 .hero-content {
   max-width: 720px;
-  margin: auto;
+  margin:auto;
   position: relative;
   z-index: 2;
+  
 }
 
 .podcast-circle {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   margin: auto;
+  border: rgba(42, 24, 108, 1);
   border-radius: 50%;
-  background: linear-gradient(135deg, #ff4fd8, #ffb347);
+  background: linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1),rgba(145, 0, 248, 1));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +129,7 @@ body {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #2affb9;
+  background:#00FF88;
   color: #000;
   padding: 6px 14px;
   border-radius: 20px;
@@ -105,7 +140,10 @@ body {
 .hero h1 {
   font-size: 56px;
   margin: 30px 0 15px;
+  padding-top: 80px;
+    
 }
+ 
 
 .hero p {
   color: #ccc;
@@ -119,12 +157,17 @@ body {
   gap: 20px;
 }
 
+
 .btn-outline {
-  border: 2px solid #2affb9;
-  color: #2affb9;
+  border: 2px solid#00FF88;
+  color:#00FF88;
   padding: 12px 26px;
   border-radius: 30px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+justify-items: center;
+gap: 8;
 }
 /* small device */
 
@@ -156,12 +199,23 @@ body {
 
   .hero {
     padding: 90px 15px;
+   
+  }
+  .hero{
+   min-height: 10vh;
+    background-position: top center;
   }
 
+
   .podcast-circle {
-    width: 120px;
-    height: 120px;
+    width: 50px;
+    height: 80px;
     font-size: 44px;
+  
+  }
+  .podcast-circle img{
+    height: 80px;
+    width: 80px;
   }
 
   .hero h1 {
@@ -169,7 +223,8 @@ body {
   }
 
   .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
   }
 }
 /* medium device */
@@ -305,6 +360,7 @@ body {
   border-radius:20px;
   box-shadow:0 10px 35px rgba(0,0,0,.6);
   transition:.4s;
+  text-align: left;
 }
 
 .card:hover{
@@ -316,8 +372,8 @@ body {
 .card p{color:#d0c7ff; line-height:1.6;}
 .icon{font-size:38px}
 
-.big{grid-row:span 2;}
-.wide{grid-column:span 2;}
+.big{grid-row:span 1;}
+.wide{grid-column:span 1;}
 
 @media(max-width:576px){
   .why-grid{grid-template-columns:1fr; grid-auto-rows:auto;}
@@ -364,7 +420,11 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 
 .episode-card h3{margin:15px 0 10px;}
 .episode-card p{color:#cfc7ff;}
-.episode-card span{color:#2cffb2; font-weight:bold;}
+.episode-card span{color:#2cffb2; font-weight:bold;
+ display: flex;
+ gap: 5px;
+
+}
 
 
 /* Host Section */
@@ -383,16 +443,22 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
   width:280px;
   height:280px;
   object-fit:cover;
-  border-radius:20px;
+ 
 }
 
 .host-info h3{font-size:32px; margin-bottom:15px;}
 .host-info p{color:#d2c9ff; line-height:1.7;}
 
 .social a{
-  margin-right:12px;
+  margin-right:20px;
   font-size:22px;
   text-decoration:none;
+
+}
+.social a img{
+  height: 20px;
+  width: 20px;
+ margin-top: 20px;
 }
 
 @media(max-width:576px){
@@ -415,7 +481,11 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 /* Footer start*/
 
 .footer {
-    background: linear-gradient(135deg, #1b0f2f, #2a145d);
+   background-image: url(./assets/footer-bg.png);
+     background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 20vh;
     color: #ffffff;
     text-align: center;
     padding: 50px 20px;
@@ -434,7 +504,7 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 }
 
 .brand span {
-    color: #d946ef;
+     color:linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)); 
 }
 
 .platforms {
@@ -451,6 +521,10 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
     font-size: 14px;
     opacity: 0.85;
     transition: opacity 0.3s;
+      display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .platforms a:hover {
@@ -477,6 +551,10 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 
     .platforms {
         gap: 15px;
+    }
+    .footer{
+      min-height: 10vh;
+    background-position: top center;
     }
 
     .platforms a {
