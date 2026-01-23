@@ -33,7 +33,7 @@ body {
   font-size: 26px;
   font-weight: 700;
 }
-.logo span {
+.wave {
   color:linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)); 
 }
 
@@ -62,11 +62,11 @@ body {
 
 }
 
-.menu-icon {
+.hamburger {
   display: none;
 }
 
-.menu-icon span {
+.hamburger span {
   display: block;
   width: 26px;
   height: 3px;
@@ -80,9 +80,17 @@ body {
 }
 
 @media (max-width: 576px) {
-  .menu-icon {
+  .hamburger {
     display: block;
     cursor: pointer;
+  }
+  .nav-menu{
+      display: none;
+    flex-direction: column;
+  }
+
+   #menu-toggle:checked + .hamburger + .nav-menu {
+    display: flex;
   }
 }
 
@@ -123,9 +131,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 60px;
   position: relative;
+  font-size: 90px;
 }
+
 
 .badge {
   position: absolute;
@@ -187,13 +196,7 @@ gap: 8;
     padding: 20px 0;
   }
 
-  #menu-toggle:checked ~ .nav-menu {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
+ 
 
   .nav-btn {
     display: none;
